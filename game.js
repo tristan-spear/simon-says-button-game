@@ -7,10 +7,19 @@ var sound;
 var userChosenColor;
 var level = 0;
 var testing = 0;
+var previous = 0;
 
 // Next Sequence Function
 function nextSequence() {
     randomNum = Math.floor(Math.random()*4);
+    
+    // reduce number of repeats
+    if(randomNum === previous) {
+        randomNum = Math.floor(Math.random()*4);
+    }
+
+    previous = randomNum;
+
     gamePattern.push(buttonColors[randomNum]);
     randomColor = buttonColors[randomNum];
     $("h1").text("Level " + ++level);
@@ -71,6 +80,7 @@ function checkAnswer(currentLevel) {
     }
     
     else {
+        level = 0;
         sound = new Audio("./sounds/wrong.mp3");
         sound.play();
         startOver();
@@ -82,7 +92,7 @@ function checkAnswer(currentLevel) {
             $(".container").addClass("hide");
             $("#level-title").html("<span class='lost'>Game Over!</span><br /><div id='restart-button' class='start'>Press Here to Restart</div>");
             $("#title").addClass("downshift");
-        }, 200);
+        }, 250);
     }
 }
 
