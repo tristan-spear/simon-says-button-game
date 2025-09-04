@@ -45,7 +45,8 @@ $(".btn").click(function(event) {
 // Play Sound
 function playSound(color) {
     $("." + color).addClass("pressed");
-    sound = new Audio("./sounds/" + color + ".mp3");
+    // sound = new Audio("./sounds/" + color + ".mp3");
+    sound = new Audio("./sounds/ben.mp3");
     sound.play();
     setTimeout(function() {
         $("." + color).removeClass("pressed");
