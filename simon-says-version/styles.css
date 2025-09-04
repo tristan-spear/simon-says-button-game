@@ -46,11 +46,6 @@ body {
   width: 200px;
   border: 10px solid rgb(125, 125, 125);
   border-radius: 20%;
-
-  background-image: url("./bridget5.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .game-over {
@@ -58,7 +53,7 @@ body {
   opacity: 0.8;
 }
 
-/* .red {
+.red {
   background-color: rgb(255, 82, 82);
 }
 
@@ -72,18 +67,12 @@ body {
 
 .yellow {
   background-color: rgb(255, 255, 95);
-} */
+}
 
 .pressed {
 
   box-shadow: 0 0 40px white;
   border-color: rgb(255, 255, 255);
-
-  /* background-image: url("./bridget5.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-
 }
 
 #start-button {
